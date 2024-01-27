@@ -1,4 +1,5 @@
 import 'package:checkout_payment/core/utils/styles.dart';
+import 'package:checkout_payment/features/checkout/presentation/views/payment_details.dart';
 import 'package:flutter/material.dart';
 
 import 'cart_info_item.dart';
@@ -54,7 +55,14 @@ class MyCartViewBody extends StatelessWidget {
             height: 16,
           ),
           CustomButtonWidget(
-            onTap: () {},
+            title: 'Complete Payment',
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const PaymentDetailsView(),
+                ),
+              );
+            },
           ),
           const SizedBox(
             height: 12,

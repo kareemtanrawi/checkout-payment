@@ -7,8 +7,10 @@ class CustomButtonWidget extends StatelessWidget {
   CustomButtonWidget({
     required this.onTap,
     super.key,
+    required this.title,
   });
   void Function()? onTap;
+  final String title;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -22,9 +24,9 @@ class CustomButtonWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            'Complete Payment',
+            title,
             style: Styles.style22,
           ),
         ),
