@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../utils/styles.dart';
 
-AppBar buildAppBar({required final String title}) {
+AppBar buildAppBar({final String? title}) {
   return AppBar(
     leading: const Icon(
       Icons.arrow_back,
@@ -13,7 +13,7 @@ AppBar buildAppBar({required final String title}) {
     elevation: 0,
     centerTitle: true,
     title: Text(
-      title,
+      title ?? '',
       textAlign: TextAlign.center,
       style: Styles.style25,
     ),
